@@ -7,6 +7,7 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
       setSelectedImg(null);
     }
   };
+
   return (
     <motion.div
       className='backdrop'

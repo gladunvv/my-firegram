@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 import quotes from '../data/quotes';
 
 const Title = () => {
-  const [quote, setQuote] = useState({ autor: '', phrase: '' });
+  const [quote, setQuote] = useState({
+    autor: 'Tim Walker',
+    phrase: 'Only photograph what you love.',
+  });
+
   useEffect(() => {
     let index = 0;
     setInterval(() => {
@@ -14,11 +18,12 @@ const Title = () => {
       index += 1;
     }, 5000 * 5);
   }, []);
+
   return (
     <div className='title'>
       <h1>Firegram</h1>
       <div className='quote'>
-        <p>"{quote.phrase}"</p>
+        <p className='phrase'>"{quote.phrase}"</p>
         <span>— {quote.autor}</span>
       </div>
     </div>

@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Niramit:wght@300&display=swap');
 
 :root {
@@ -45,9 +42,13 @@ body {
 .title .quote {
   font-family: 'Niramit', sans-serif;
   color: var(--primary);
-  height: 180px;
+  height: 140px;
   display: flex;
   flex-direction: column;
+}
+
+.quote .phrase {
+  margin: 0;
 }
 
 /* upload form styles */
@@ -127,6 +128,29 @@ label:hover {
   left: 0;
 }
 
+.function-tabs {
+  position: absolute;
+  color: white;
+  margin: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  font-family: 'Niramit', sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.function-tabs .tab:hover {
+  cursor: pointer;
+  text-shadow: 3px 5px 7px rgba(255, 255, 255, 0.911);
+}
+
 /* modal styles */
 .backdrop {
   position: fixed;
@@ -144,4 +168,56 @@ label:hover {
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
   border: 3px solid white;
+}
+
+/* modal delete styles */
+.backdrop .delete-modal {
+  display: block;
+  max-width: 60%;
+  height: 40%;
+  font-family: 'Niramit', sans-serif;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 60px auto;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+  border: 3px solid #fff;
+  color: #fff;
+}
+
+.modal-wrap {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-modal p {
+  font-size: 23px;
+}
+
+.delete-modal .buttons {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.delete-modal .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  border: 1px solid #fff;
+}
+
+.delete-modal .button:hover {
+  cursor: pointer;
+}
+
+.button.delete:hover {
+  background-color: rgba(163, 0, 0, 0.863);
+}
+
+.button.cancel:hover {
+  background-color: rgba(8, 0, 0, 0.7);
 }
