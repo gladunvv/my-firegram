@@ -33,14 +33,6 @@ const tabsMotion = {
 const ImageGrid = ({ setSelectedImg, deleteSelectedImage }) => {
   const { docs } = useFirestore('images');
 
-  const copySelectedImage = (url) => {
-    const el = document.createElement('textarea');
-    el.value = url;
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-  };
   return (
     <div className='img-grid'>
       {docs &&
@@ -76,7 +68,7 @@ const ImageGrid = ({ setSelectedImg, deleteSelectedImage }) => {
                 className='tab'
                 onClick={(e) => {
                   e.stopPropagation();
-                  copySelectedImage(doc.url);
+                  navigator.clipboard.writeText(doc.url);
                 }}
               >
                 copy link
