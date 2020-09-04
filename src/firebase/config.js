@@ -2,7 +2,7 @@ import * as firebase from 'firebase/app';
 import 'firebase/storage';
 import 'firebase/firestore';
 
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: 'AIzaSyBcD-XLTqvlqC6uqMpVd_wxXIM0iq2N0DQ',
   authDomain: 'ninja-firegram-5046b.firebaseapp.com',
   databaseURL: 'https://ninja-firegram-5046b.firebaseio.com',
